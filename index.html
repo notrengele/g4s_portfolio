@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="fp-enabled" lang="mk" style="overflow: hidden; height: 100%;">
+
+<head>
+	<meta charset="UTF-8">
+	<title>G4S Network</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="description" content="G4S Network">
+	<meta name="keywords" content="G4S Network"> 
+	<link href="css/brp7b30.css?v=4" rel="stylesheet">
+	<link href="css/main7b30.css?v=4" rel="stylesheet">
+	<link href="css/fullpage7b30.css?v=4" rel="stylesheet">
+	<link href="favicon.html" rel="shortcut icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="fav/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+<link rel="manifest" href="fav/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.html">
+	<link href="css/themes/semantic.rtl.min7b30.css?v=4" rel="stylesheet">
+	<script src="js/jquery-1.11.3.min.js">
+	</script>
+	<script src="js/fm.revealator.jquery.min7b30.js?v=4">
+	</script>
+	<script src="js/jquery-ui7b30.js?v=4">
+	</script>
+<script>
+	   jQuery(function($) {
+	   
+	   var index = 'qpsstats-active-tab';
+	   var dataStore = window.sessionStorage;
+	   var oldIndex = 0;
+	   
+	   var tabs = $('.about_tabs');
+	   var tabs_select = true;
+	   var selector = $(".about_tabs").find(".slide__brp");
+	   var activeItem = tabs.find('.about_tabs li .ui-state-active');
+	   var activeWidth = activeItem.innerWidth();
+	   
+	   $(".slide__brp").css({
+	     "left": activeItem.position.left + "px", 
+	     "width": activeWidth + "px"
+	   });
+
+
+
+	       
+	   try {
+	       oldIndex = dataStore.getItem(index);
+	       $('#brp_slide').addClass('animated fadeInLeft tabs' + oldIndex);
+	       $('#brp_slide').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+	           $(this).removeClass('animated fadeInLeft');
+	       });
+	   } catch (e) {}
+
+
+	   $("#tabs").tabs({
+	       active: oldIndex,
+	       hide: {
+	           effect: "fade",
+	           duration: 200
+	       },
+	       show: { 
+	           function( event, ui ) {
+
+	           alert('2');
+	           },
+	           effect: "fade",
+	           direction: "right",
+	           duration: 200
+	       }, 
+	       activate: function(event, ui) {
+				   tabs_select = false;
+					
+				   var newIndex = ui.newTab.parent().children().index(ui.newTab);
+				
+				   $('#brp_slide').removeClass();
+				   $('#brp_slide').addClass('animated fadeInLeft tabs' + newIndex);
+				   $('#brp_slide').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+					   $(this).removeClass('animated fadeInLeft');  
+				 });
+					var isn = $('.ui-tabs-active');
+					var activeWidth = isn.innerWidth();
+					var itemPos = isn.position();
+						 $(".slide__brp").css({
+						   "left":itemPos.left + "px", 
+						   "width": activeWidth + "px"
+					});
+	           
+			   
+	           try {
+	               dataStore.setItem(index, newIndex);
+	           } catch (e) {}
+				tabs_select = true;
+	       }
+	   })
+	   
+	   
+	   
+			window.onload = function() {
+			var elm = $(".revealator-slideright");
+			elm.css('transform','translate(0, 0)').css('opacity', '1').css('z-index', '1');
+			};
+				   
+			
+	    	function slider_tabs() {
+	        var elm = $(".ui-state-active");
+	        var activeWidth = elm.innerWidth();
+	        var itemPos = elm.position();
+	        $(".slide__brp").css({
+			"left":itemPos.left + "px", 
+			"width": activeWidth + "px"
+			});
+			}
+			window.onresize = function(event) {
+			slider_tabs();
+		    };
+			
+			
+			slider_tabs();
+	})
+	</script>
+	<style>
+	   .ajs-message.ajs-default_rd {
+	   background: rgba(166, 166, 166, 0.65);
+	   color: #fff;
+	   border: none;
+	   border-radius: 6px;
+	   }
+
+		.container_item__play:nth-child(3) .btn__play {
+		pointer-events: none;
+		}
+	</style>	
+
+</head>
+
+<body class="layout fp-viewing-intro fp-responsive" style="overflow: hidden; height: 100%;">
+	<div class="layout__header">
+		<div class="container">
+			<div class="header" id="myMenu">
+				<div class="header__content">
+					<div class="header__logo">
+						<a class="G4S_LOGO.png active" href="index.html#pocetna"></a>
+					</div>
+					<div class="header__bars">
+						<div class="bars js-controller" data-controlled=".header__links"></div>
+					</div>
+				</div>
+				<div class="header__links">
+					<div class="header__nav">
+						<div class="nav">
+							<a class="nav__link" data-menuanchor="pocetna" href="index.html#pocetna">Početna</a> <a class="nav__link" data-menuanchor="info" href="index.html#info">Kako da igrate?</a> <a class="nav__link" data-menuanchor="sledite" href="index.html#sledite">Sledite nas</a>
+						</div>
+					</div>
+                    <div class="header__contacts">
+						<div class="nav">
+							<a class="nav__link nav__link_private primary_btn gradient_btn__orange not_private" href="https://discord.gg/nTerQbQ"><i class="ic__user"></i>Connect</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layout__content">
+		<div class="content fullpage-wrapper" id="fullpage">
+			<div class="section content__slide__about fp-section fp-table" data-anchor="info" data-fp-styles="null">
+				<div class="fp-tableCell">
+					<div class="pxl">
+						<div id="scene2">
+							<div class="slide-main__about" data-depth="0.2"></div>
+						</div>
+					</div>
+					<div class="slide-content slide-content_about container">
+						<div class="info slide-content__content wrapper">
+							<div class="about-the-project__main slide-content__content-main slide-content__content-main_max-width container__about">
+								<div class="slide_tabs tabs0" id="brp_slide"></div>
+							</div>
+							<div class="slide-content__content-side">
+								<div class="about_tabs" id="tabs">
+									<ul>
+										<li class="tabs-1">
+											<a href="index.html#brp-1"><span></span></a>
+										</li>
+										<li class="tabs-2">
+											<a href="index.html#brp-2"><span></span></a>
+										</li>
+										<li class="tabs-3">
+											<a href="index.html#brp-3"><span></span></a>
+										</li>
+										<li id='slider'><span class="slide__brp"></span></li>
+									</ul>
+									<div class="tabs-container-wrapper">
+										<div class="tabs-container">
+											<div id="brp-1">
+												<div class="h_tabs">
+													G4S Network | Role Play
+												</div>
+												<p>Ovo je balkanski server gde mozete kupiti auta (bmw/mercedesa i ostala), i gde se može igrati RolePlay sa mnogo stabilnim skriptama i interesantnim poslovima koji se mogu raditi na serveru.</p>
+											</div>
+											<div id="brp-2">
+												<div class="h_tabs">
+													Administracija
+												</div>
+												<p>Owners: ross. & AeZaKMI, C.E.O: Djole, Kript0 & Skumby</p>
+											</div>
+											<div id="brp-3">
+												<div class="h_tabs">
+													Voice Chat
+												</div>
+												<p>Na G4S Network RolePlay Serveru morate da posedujete mikrofon kako bi ste pričali sa ostalim igračima, klikom na tipku "N". Na serveru je strogo zabranjeno da se koristi IC Chat umjesto Voice! Molimo vas prije ulaska na server uzmite Mikrofon.</p>
+											</div>
+											<div class="button">
+												<a class="btn gradient_btn__orange btn__tabs" href="https://discord.gg/nTerQbQ" target="_blank">Pridružite se na Discordu</a> <a class="btn btn_rond_orange btn__tabs modal-video-brp" href="index.html">Uskoro Promo</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section content__slide__playing fp-section fp-table" data-anchor="sledite" data-fp-styles="null">
+				<div class="bg-play"></div>
+				<div class="fp-tableCell">
+					<div class="slide-content slide-content_playing container wrapper">
+						<div class="playing slide-content__content">
+							<div class="slide-content__content-side">
+								<div class="md">
+									<div class="h_tabs">
+										Kako da udjete na G4S Network? 
+									</div>
+									<p>Potrebno je da sledite ovo uputstvo da bi usli na prvi balkanski roleplay server koji moze da primi vise od 1000 igrača bez ikakvih problema!</p>
+								</div>
+							</div>
+							<div class="md_bt">
+							</div>
+						</div>
+						<div class="page__width__play">
+							<div class="container__play">
+								<div class="container_item__play">
+									<img alt="content" src="images/content/play_1.png">
+									<div class="block">
+										<h3 class="block__heading">Potrebno je da kupite GTA:V</h3>
+										<p class="block__content">GTA 5 igra se može kupiti preko (Steam ili Social Club) <span>Ukoliko posedujete vec GTA5 preskočite ovaj korak.</span></p>
+									</div><a class="btn__play gradient_btn__orange" href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" target="_blank"><span class="ic__download"></span> Kupi GTA5</a>
+								</div>
+							    <div class="container_item__play">
+									<img alt="content" src="images/content/fivem_1.png">
+									<div class="block">
+										<h3 class="block__heading">Preuzmite FiveM Launcher</h3>
+										<p class="block__content">Da bi ste usli na ovaj server potrebno je da preuzmete i snimite FiveM Launcher.</p>
+									</div><a class="btn__play gradient_btn__orange download__multiplayer" href="https://runtime.fivem.net/client/FiveM.exe"><span class="ic__download"></span> FiveM Download</a>
+								</div>						
+							    <div class="container_item__play">
+									<img alt="content" src="images/content/disc_2.jpg">
+									<div class="block">
+										<h3 class="block__heading">Potrebno je da posedujete Discord</h3>
+										<p class="block__content">Ako vec posedujete Discord, pritisnite dugme connect.</p>
+										</div><a class="btn__play gradient_btn__orange" href="https://discord.gg/nTerQbQ" target="_blank"><span class="ic__download"></span> USKORO</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section content__slide__footer fp-section fp-table" data-anchor="footer" data-fp-styles="null">
+				<div class="fp-tableCell">
+					<div class="slide-content slide-content_footer container wrapper">
+						<div class="footer slide-content__content">
+							<div class="slide-content__content-side footer">
+								<div class="md_l footer_page">
+									<div class="h_tabs">
+										Sledite nas na 
+									</div>
+									<p>G4S Network RolePlay je aktivan na sledečim socijalnim mrezama!</p>
+								</div>
+								<ul class="md_l contact_blc">
+									<li class="contact">
+										<a href="https://discord.gg/nTerQbQ" target="_blank"><img alt="discord" class="img" src="images/discord.png">
+										<div class="grow">
+											<div class="h">
+												Discord
+											</div>
+											<p>Ovo je nasi oficijalni discord gde mozete upoznati igraca iz servera.</p>
+										</div>
+										<div class="btn btn_rond_orange">
+											Connect
+										</div></a>
+									</li>
+									<li class="contact">
+										<a href="https://www.youtube.com/channel/UCFViJdz_vfmXUpdL3pTJ0zA" target="_blank"><img alt="youtube" class="img" src="images/youtube.png">
+										<div class="grow">
+											<div class="h">
+												YouTube
+											</div>
+											<p>Oficijalni strim G4S Network RolePlay gde mozete naci videa od servera.</p>
+										</div>
+										<div class="btn btn_rond_orange">
+											See
+										</div></a>
+									</li>
+									<li class="contact">
+										<a href="https://www.instagram.com/g4s.network/" target="_blank"><img alt="instagram" class="img" src="images/instagram.png">
+										<div class="grow">
+											<div class="h">
+												Instagram
+											</div>
+											<p>Sve fotografije i ostalo sa roleplay eventa i sve ostalo mozete pratiti na instagramu.</p>
+										</div>
+										<div class="btn btn_rond_orange">
+											See
+										</div></a>
+									</li>
+									<li class="contact">
+										<a href="https://www.facebook.com/G4SRS-109113294083876/" target="_blank"><img alt="facebook" class="img" src="images/facebook.png">
+										<div class="grow">
+											<div class="h">
+												Facebook
+											</div>
+											<p>Uskoro mozete nas slediti i na fejsbuka.</p>
+										</div>
+										<div class="btn btn_rond_orange">
+											See
+										</div></a>
+									</li>
+								</ul>
+																<p>&copy; Made by not rengele<p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<link href="css/brp-tem7b30.css?v=4" rel="stylesheet">
+	<link href="css/fm.revealator.jquery7b30.css?v=4" rel="stylesheet">
+	<link href="css/animate7b30.css?v=4" rel="stylesheet">
+	<link href="css/magnific-popup7b30.css?v=4" rel="stylesheet">
+	<link href="css/alertify.min7b30.css?v=4" rel="stylesheet">
+	<script src="js/alertify.min7b30.js?v=4">
+	</script>  
+	<script src="js/fastmark7b30.js?v=4">
+	</script> 
+	<script src="js/fullpage7b30.js?v=4">
+	</script> 
+	<script src="js/parallax7b30.js?v=4">
+	</script> 
+	<script src="js/main7b30.js?v=4">
+	</script> 
+	<script src="js/brp.min7b30.js?v=4">
+	</script> 
+	<script src="js/jquery.magnific-popup7b30.js?v=4">
+	</script> 
+	
+	
+	<script>$(window).on('load', function () {
+    var $preloader = $('#p_prldr'),
+        $svg_anm   = $preloader.find('.svg_anm');
+    $svg_anm.fadeOut();
+    $preloader.delay(500).fadeOut('slow');
+});</script>
+
+
+	<div id="fp-nav">
+		<ul></ul>
+	</div>
+</body>
+
+</html>
